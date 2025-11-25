@@ -68,7 +68,7 @@ public class FibAuthenticationHandler : DelegatingHandler
             {
                 return;
             }
-            using var authClient = _httpClientFactory.CreateClient(HttpClientNames.Auth);
+            var authClient = _httpClientFactory.CreateClient(HttpClientNames.Auth);
             var content = new FormUrlEncodedContent(
             [
                 new KeyValuePair<string, string>("grant_type", "client_credentials"),
