@@ -6,7 +6,6 @@ using Microsoft.Extensions.Options;
 using Moq;
 using Moq.Protected;
 using System.Net;
-using System.Net.Http.Headers;
 using System.Text.Json;
 using Xunit;
 
@@ -251,7 +250,7 @@ public class FibAuthenticationHandlerTests : IDisposable
         var tokenResponse = new TokenResponse
         {
             AccessToken = "test-token",
-            ExpiresIn = 100, 
+            ExpiresIn = 100,
             TokenType = "Bearer"
         };
 
