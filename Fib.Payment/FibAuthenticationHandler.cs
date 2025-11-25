@@ -17,6 +17,7 @@ public class FibAuthenticationHandler : DelegatingHandler
     private readonly SemaphoreSlim _tokenLock = new(1, 1);
     private readonly IHttpClientFactory _httpClientFactory;
 
+
     /// <summary>
     /// Initializes a new instance of the <see cref="FibAuthenticationHandler"/> class
     /// </summary>
