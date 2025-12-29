@@ -42,7 +42,8 @@ public static class ServiceCollectionExtensions
 
     private static void ConfigureFibServices(IServiceCollection services)
     {
-        services.AddSingleton<FibAuthenticationHandler>();
+        services.AddSingleton<IFibTokenService, FibTokenService>();
+        services.AddTransient<FibAuthenticationHandler>();
 
         services.AddHttpClient<FibPaymentService>((serviceProvider, client) =>
         {
